@@ -1,5 +1,5 @@
 # A fully integrated React + Express server, bundled by Parcel
-[screenshot]: https://github.com/lucascassiano/fullstack-app-template/blob/master/screenshot.png "Screenshot"
+[screenshot]: https://github.com/lucascassiano/fullstack-app-template/raw/master/screenshot.png "Screenshot"
 
 * React
 * Express server
