@@ -26,6 +26,7 @@ In development:
 npm install
 npm start
 ```
+🚨 After the first time It bundles the views, **open and save any file inside /views/** otherwise you will get an error
 
 In production: (if Using Google Cloud AppEngine)
 
