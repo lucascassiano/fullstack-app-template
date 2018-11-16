@@ -30,6 +30,7 @@ let ReloadApp = (success, msg) => {
 
 //execute bundler
 let bundler = new ViewsBundler();
+//
 
 app.use(bundler.getDefault().middleware());
 
@@ -46,18 +47,20 @@ app.get('/home', (req, res) => {
     res.sendFile(path.join(viewsPath, '/home.html'));
 });
 
+
 app.listen(PORT, function () {
-    console.log(`🚀 running @ port ${PORT}`);
 
     if (ENV == 'development') {
         console.log(`☕️  ${ENV} -> Creating Front-end bundle`);
-        bundler.runBundle(ReloadApp);
+        bundler.runBundle();
+        console.log(`🚀 running: http://localhost:${PORT}`);
     }
 
     else {
         console.log(`🍺  ${ENV} -> Building Front-end`);
-        bundler.runBuild(() => { console.log('🚀  App Launched!') });
+        bundler.runBuild(() => { console.log(`🚀 running: http://localhost:${PORT}`) });
     }
+
 
     events.broadcast({ msg: 'reload' });
 

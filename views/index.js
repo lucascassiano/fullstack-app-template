@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import "./index.less";
+
 import Button from "./components/Button";
+import UserProfile from "./components/UserProfile";
 import { type } from 'os';
 
 class App extends Component {
@@ -22,18 +24,13 @@ class App extends Component {
     }
 
     render() {
-        let data = getCookie('data') || { name: "error" };
-        return (<div>Hello from React counter: {this.state.counter}s <Button>{data.name}</Button></div>);
+
+        return <div className="content">
+            <UserProfile type="A" name="Stan Lee" />
+           this.state.counter: {this.state.counter}s
+         
+        </div>;
     }
-}
-
-function getCookie(cookiename) {
-    if (!document.cookie)
-        return null;
-
-    var cookiestring = RegExp("" + cookiename + "[^;]+").exec(document.cookie);
-    var decoded = decodeURIComponent(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./, "") : "");
-    return JSON.parse(decoded);
 }
 
 

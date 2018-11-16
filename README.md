@@ -10,12 +10,14 @@
 * Babel 7.1.0 for both React frontend **and** Express backend
 
 ## Roadmap
-   1.✅ Parcel Bundler + Express Server
-   2.✅ React hot-load | Html Live-load
-   6. Postgres Connection
-   4. GraphQL Integration
-   5. Modular GraphQL
-   
+   1.✅ Back-end Live-reload ♻️
+   2.✅ Parcel Bundler + Express Server + React implementation
+   3.✅ Front-end Live-reload ♻️
+   4. Postgres Connection 🐘
+   5. GraphQL Integration 
+   6. Modular GraphQL
+   7. React Routers
+
 ### Install and run
 In development:
 

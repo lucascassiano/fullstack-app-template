@@ -2,7 +2,7 @@ const Bundler = require('parcel-bundler');
 const Path = require('path');
 
 export default class ViewsBundler {
-    constructor(viewsDir, outFile, outDir) {
+    constructor(callback, viewsDir, outFile, outDir) {
         this.entryFiles = Path.join(__dirname, viewsDir || '../views/*');
 
         console.log(this.entryFiles);
@@ -25,6 +25,8 @@ export default class ViewsBundler {
             hmrHostname: '', // A hostname for hot module reload, default to ''
             detailedReport: false // Prints a detailed report of the bundles, assets, filesizes and times, defaults to false, reports are only printed if watch is disabled
         };
+        //init the bundle
+        this.runBundle(callback);
     }
 
     runBundle = async (callback) => {
